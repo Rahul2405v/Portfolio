@@ -2,11 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import './App.css';
 import gsap from 'gsap';
 import { useGSAP } from "@gsap/react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Shape from './irregular.png';
 import Avatar from './avatar.png';
-import arrow from './downarrow.svg';
-import aboutme from './users.png';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import html from './images/html.png';
 import css from './images/css.png';
@@ -19,7 +15,6 @@ import java from './images/java.png';
 import springBoot from './images/spring-boot.png';
 import mongodb from './images/mongodb.png';
 import Pdf from './images/Resume.pdf';
-import github from './images/github.png';
 import ABSA from './images/ABSA.jpg';
 import CO2 from './images/CO2.jpg';
 import FrozenLake from './images/FrozenLake.gif';
@@ -40,7 +35,7 @@ export default function App() {
     }
   };
 
-  const [isMobile, setIsMobile] = useState(false);
+  // Removed unused variable isMobile
   const [typedText, setTypedText] = useState('');
   const letterRefs = useRef([]);
   const avatarRef = useRef(null);
@@ -249,7 +244,7 @@ export default function App() {
       {/* Navigation */}
       <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
         <div className="container">
-          <a className="navbar-brand fw-bold fs-3 text-gradient" href="#">Portfolio</a>
+          <a className="navbar-brand fw-bold fs-3 text-gradient" href="/">Portfolio</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span className="navbar-toggler-icon"></span>
           </button>
